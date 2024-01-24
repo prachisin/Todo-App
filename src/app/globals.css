@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root{
+  --themeRed: #F54748;
+  --themeBlack: #2E2E2E;
+  --pink: #FDECEC;
+  --gray:#828282;
+  --shadow: -4px 12px 20px -2px rgba(0,0,0,0.19);
+  --background-color: linear-gradient(180deg, rgba(255,237,237,0.85;));
+  --cartBack: rgba(255,255,255,0.38);
+}
+
+
+html,body{
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  color: var(--themeBlack);
+  background: var(--background-color);
+  overflow-x: hidden;
+}
+
+
+::-webkit-scrollbar{
+  width: 5px;
+}
+
+::-webkit-scroll-thumb{
+  background: var(--theme);
+  border-radius: 1rem;
+}
+
+::-webkit-scrollbar-thumb{
+  background: var(--themeRed);
+  border-radius: 1rem;
+}
+
+::-webkit-scroll-thumb:hover{
+  background: #555;
+}
+
+a{
+  color: inherit;
+  text-decoration: none;
+}
+
+*{
+  box-sizing: border-box;
+  transition: all 300ms ease;
+}
+
+:root {
+  --foreground-rgb: 0, 0, 0; 
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
